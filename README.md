@@ -8,8 +8,10 @@ This is a simple application that enables the user to enter notes for later use.
 
 ## Installation
 
-1. Clone the repository from github: "git@github.com:NickLynnJohnson/Take-2.git".
-2. Run in default browser, use Github Pages, etc.
+1. Clone the repository from github: "git@github.com:NickLynnJohnson/Take-2.git"
+2. Run "npm install" to install dependencies
+3. Run "node server.js"
+4. Open "http://localhost:9999" in your browser
 
 ## App Demo
 
