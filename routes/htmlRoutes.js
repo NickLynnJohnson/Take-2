@@ -1,4 +1,4 @@
-// Call dependicies for routing
+// Call dependencies for routing
 var path = require("path");
 
 // Route
