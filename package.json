@@ -1,0 +1,22 @@
+{
+  "name": "take-2",
+  "version": "1.0.0",
+  "description": "Write, save, and delete notes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickLynnJohnson/Take-2.git"
+  },
+  "author": "Nick Johnson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NickLynnJohnson/Take-2/issues"
+  },
+  "homepage": "https://github.com/NickLynnJohnson/Take-2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
