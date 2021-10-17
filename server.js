@@ -13,6 +13,9 @@ app.use(express.json());
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
+// Be able to use static files
+app.use(express.static("public"));
+
 // Setup listener for app
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);

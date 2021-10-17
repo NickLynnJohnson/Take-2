@@ -10,8 +10,13 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/notes.html"));
   });
 
+  // app.get("/notes/styles.css", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../assets/css/styles.css"));
+  // });
+
+
   // If no matching route is found default to index
-  app.get("*", function(req, res) {
+  app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 };
