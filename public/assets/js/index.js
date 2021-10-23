@@ -1,14 +1,28 @@
-
 // Call in variables
 const $noteAside = $(".note-aside"); 
+const $noteTitle = $(".note-title");
+const $noteText = $(".note-textarea");
+const $saveNoteBtn = $(".save-note");
 
-// Get notes from the db
+// All db functions
+
+//// Get notes from the db
 var getNotes = function() {
     return $.ajax({
         url: "/api/notes",
         method: "GET"
     });
 }
+
+//// Save a new note to the db
+const saveNote = function(note) {
+    return $.ajax({
+      url: "/api/notes",
+      data: note,
+      method: "POST",
+    });
+  };
+  
 
 // Render note list from db
 var renderDB = function(allNotes) {
@@ -35,12 +49,33 @@ var renderDB = function(allNotes) {
     $noteAside.append(changedAllNotes);
 }
 
+// Save note functions
+
+//// Get the note data from inputs
+
+const handleNoteSave = function() {
+    const newNote = {
+        title: $noteTitle.val(),
+        text: $noteText.val()
+    }
+
+    saveNote(newNote).then(function(data) {
+        getAndRenderNotes();
+        renderActiveNote();
+      });
+}
+
+
 // (See Execute call at bottom) Functions to get already-stored db entries and display them to the notes aside
 var getAndRenderNotes = function() {
     return getNotes().then(function(data) {
         renderDB(data);
     })
 }
+
+// All click handlers
+
+
 
 // (Execute) Functions to get already-stored db entries and display them to the notes aside
 getAndRenderNotes();
