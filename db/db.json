@@ -1,14 +1,17 @@
 [
     {
         "title":"Grocery List",
-        "text":"Get green eggs and ham"
+        "text":"Get green eggs and ham",
+        "id": 1
     },
     {
         "title":"Book ideas",
-        "text":"Write your own autobiography."
+        "text":"Write your own autobiography.",
+        "id": 2
     },
     {
         "title":"Diary",
-        "text":"Yesterday I experienced X. Today I experienced Y. Tomorrow I want to do Z."
+        "text":"Yesterday I experienced X. Today I experienced Y. Tomorrow I want to do Z.",
+        "id": 3
     }
 ]
