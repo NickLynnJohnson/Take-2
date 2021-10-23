@@ -74,7 +74,7 @@ var getAndRenderNotes = function() {
 }
 
 // All click handlers
-
+$saveNoteBtn.on("click", handleNoteSave);
 
 
 // (Execute) Functions to get already-stored db entries and display them to the notes aside
