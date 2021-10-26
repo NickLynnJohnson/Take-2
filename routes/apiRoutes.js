@@ -8,15 +8,12 @@ var dbNotes = require("../db/db");
 
 module.exports = function(app) {
   // GET Requests
-
   app.get("/api/notes", function(req, res) {
     res.json(dbNotes);
   });
 
   // POST Requests
-
-  //// Note: have a write funtion handy to update the db file with new post requests
-
+  //// Note: have a write funtion handy first to update the db file with new post requests
   function writeNewNoteDB(newNotes) {
     freshNotes = JSON.stringify(newNotes);
     
