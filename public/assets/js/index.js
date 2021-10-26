@@ -65,9 +65,15 @@ const handleNoteSave = function() {
         text: $noteText.val()
     }
 
+    // On the frontend, make the text that was entered disappear
+    // $("#commentField").val('');
+    $noteTitle.val(''); 
+    $noteText.val('');
+
     // Once note is gleaned from the field, send it to the db
     saveNote(newNote);
-    // Automatically display the new db
+
+    // Automatically display the new db on the aside panel
     getAndRenderNotes();
 };
 
@@ -91,6 +97,7 @@ var getAndRenderNotes = function() {
 
 // All click handlers
 $saveNoteBtn.on("click", handleNoteSave);
+$noteList.on("click", ".delete-note", handleNoteDelete);
 
 //// "delete-note" doesn't exist from the html. Instead, it gets created via js when an entry is saved to/or already exists in, the db
 $noteList.on("click", ".delete-note", handleNoteDelete);

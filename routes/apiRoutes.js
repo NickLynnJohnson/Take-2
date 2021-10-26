@@ -50,9 +50,26 @@ module.exports = function(app) {
 
     // Now write the db file with the new array
     writeNewNoteDB(dbNotes);
+
+    res.json(dbNotes);
   })
 
-  
   // DELETE Requests
+  app.delete("/api/notes/:id", function(req, res){
 
+    // Bring in the id you want to code for
+    var deleteThisID = req.params.id;
+
+    // Go through the db file until you find that id, then delete it from the array
+    for (i = 0; i < dbNotes.length; i++) {
+      if (dbNotes[i].id == deleteThisID) {
+        dbNotes.splice(i, 1);
+        break;
+      }
+    }
+
+    // Now update the db file to reflect this deletion
+    writeNewNoteDB(dbNotes);
+
+  })
 };
