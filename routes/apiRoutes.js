@@ -26,9 +26,6 @@ module.exports = function(app) {
       } else {
         console.log("Note successfully saved.")
       }
-
-      // Render the db Notes
-      res.json(dbNotes);
     })
   }
 
@@ -53,6 +50,9 @@ module.exports = function(app) {
 
     // Now write the db file with the new array
     writeNewNoteDB(dbNotes);
+
+    // Render the db Notes
+    res.json(dbNotes);
   })
 
   // DELETE Requests
@@ -71,5 +71,8 @@ module.exports = function(app) {
 
     // Now update the db file to reflect this deletion
     writeNewNoteDB(dbNotes);
+
+    // Render the db Notes
+    res.json(dbNotes);
   })
 };
