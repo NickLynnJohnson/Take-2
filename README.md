@@ -1,6 +1,6 @@
 # Take-2
 
-![Take-2-Demo](/assets/images/plan-to-schedule-demo.gif?raw=true "Take-2-Demo")
+![Take-2-Demo](/public/assets/images/take-2.gif?raw=true "Take-2-Demo")
 
 ## Description
 
@@ -15,7 +15,7 @@ This is a simple application that enables the user to enter notes for later use.
 
 ## App Demo
 
-Check it out on Heroku here: "Enter link here".
+Check it out on Heroku here: https://take-notes-2.herokuapp.com/
 
 ## Technologies Used
 
