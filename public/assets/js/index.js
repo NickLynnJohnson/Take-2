@@ -66,7 +66,6 @@ const handleNoteSave = function() {
     }
 
     // On the frontend, make the text that was entered disappear
-    // $("#commentField").val('');
     $noteTitle.val(''); 
     $noteText.val('');
 
